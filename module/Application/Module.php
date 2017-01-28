@@ -48,7 +48,7 @@ class Module
           'Application\Model\UserTable' => function($sm){
             $tableGateway = $sm->get('UserTableGateway');
             $table = new UserTable($tableGateway);
-            var_dump($table);
+
             return $table;
           },
         'UserTableGateway' => function ($sm){
@@ -56,7 +56,7 @@ class Module
           $resultSetPrototype = new ResultSet();
           $resultSetPrototype->setArrayObjectPrototype(new User());
           return new TableGateway(
-            'user', $dbAdapter, null, $resultSetPrototype
+            'User', $dbAdapter, null, $resultSetPrototype
           );
         },
         )

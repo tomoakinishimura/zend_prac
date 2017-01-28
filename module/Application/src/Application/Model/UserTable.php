@@ -1,4 +1,7 @@
 <?php
+
+namespace Application\Model;
+
 use Zend\Db\TableGateway\TableGateway;
 
 class UserTable
@@ -23,7 +26,7 @@ class UserTable
     $rowset = $this->tableGateway->select(array('id' => $id));
     $row = $rowset->current();
     if(!$row){
-      throw new ¥Exception("could not fin row $id");
+      throw new \Exception("could not fin row $id");
     }
     return $row;
   }
@@ -34,14 +37,16 @@ class UserTable
       'name' => $user->name,
       'email' => $user->email,
     );
+
     $id = (int)$user->id;
+
     if($id == 0){
       $this->tableGateway->insert($data);
     }else{
       if($this->getUser($id)){
         $this->tableGateway->update($data, array('id' => $id));
       }else {
-        throw new ¥Exception('Form id does not exist');
+        throw new \Exception('Form id does not exist');
       }
     }
   }

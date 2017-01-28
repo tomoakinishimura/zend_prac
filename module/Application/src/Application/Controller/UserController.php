@@ -30,6 +30,7 @@ class UserController extends AbstractActionController
       'key1' => 'value1',
       'key2' => 'value2',
     );
+
     $view = new ViewModel($values);
 
     return $view;
