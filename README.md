@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ZendSkeletonApplication
 
 ## Introduction
@@ -221,3 +222,8 @@ $ composer cs-fix
 # Run PHPUnit tests:
 $ composer test
 ```
+=======
+# prac php,and zend framework 2
+ this is practice,which is for study php framework
+
+>>>>>>> origin/master
