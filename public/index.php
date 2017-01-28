@@ -1,4 +1,7 @@
 <?php
+// 環境変数を追加
+putenv("ZF_PATH=" . '../vender/ZF2/library');
+
 /**
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
