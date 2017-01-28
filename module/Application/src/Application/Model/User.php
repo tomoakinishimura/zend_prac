@@ -4,14 +4,53 @@ namespace Application\Model;
 
 class User
 {
-  public $id;
-  public $name;
-  public $email;
+  //id
+  protected $id;
+  //name
+  protected $name;
+  //email
+  protected $email;
+  //password
+  protected $password;
+  //comment
+  protected $comment;
+  //url
+  protected $url;
 
-  public function exchangeArray($data)
+  //ctor
+  public function __construct()
   {
-      $this->id    = (isset($data['id'])) ? $data['id'] : 0;
-      $this->name  = (isset($data['name'])) ? $data[ 'name'] : '';
-      $this->email = (isset($data['email'])) ? $data['email'] : '';
+
   }
+
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+
+  public function setEmail($email)
+  {
+    $this->email = $email;
+  }
+
+  public function setPassword($password)
+  {
+    $this->password = $password;
+  }
+
+  public function setComment($comment)
+  {
+    $this->comment = $comment;
+  }
+
+  public function setUrl($url)
+  {
+    $this->url = $url;
+  }
+
 }
