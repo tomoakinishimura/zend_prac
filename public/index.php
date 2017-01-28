@@ -13,6 +13,8 @@ if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['RE
     return false;
 }
 
+//define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
+
 // Setup autoloading
 require 'init_autoloader.php';
 
