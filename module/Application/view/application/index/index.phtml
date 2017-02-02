@@ -1,18 +1,41 @@
+<?php
 
-<div class="container">
-	<div class="row">
-        <div class="col-md-6">
-    		<h2>Custom search field</h2>
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="Buscar" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
+//$form = $this->form;
+//$form->setAttribute('action', $this->url('album', array('action' => 'add')));
+//$form->prepare();
+//echo $this->form()->openTag($form);
+
+?>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="col-md-6 col-md-offset-3">
+
+        <!-- Search Form -->
+        <form role="form" method="post" action="/">
+        
+        <!-- Search Field -->
+            <div class="row">
+                <h1 class="text-center"><?php echo $title; ?></h1>
+                <div class="form-group">
+                    
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="searchText" placeholder="Search" required/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <span style="margin-left:10px;">Search</span>
+                            </button>
+                        </span>
+                        </span>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
-	</div>
+            
+        </form>
+        <!-- End of Search Form -->
+            
+    </div>
 </div>
+
+<?php //echo $this->form()->closeTag(); ?>
